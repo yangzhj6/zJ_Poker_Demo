@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9082C308-2710-48C9-9025-1206E05E516F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>zJ_Poker_Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4F3C000D-4F76-460A-8138-F0FAA507689C</key>
+		<string>https://github.com/yangzhj6/zJ_Poker_Demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>zJ_Poker_Demo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4F3C000D-4F76-460A-8138-F0FAA507689C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yangzhj6/zJ_Poker_Demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4F3C000D-4F76-460A-8138-F0FAA507689C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4F3C000D-4F76-460A-8138-F0FAA507689C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zJ_Poker_Demo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

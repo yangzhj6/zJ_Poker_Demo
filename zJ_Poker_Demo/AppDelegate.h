@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
+#import "WXImageView.h"
+#import "BaseNavigationController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +18,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong,nonatomic) MainViewController *mainViewController;
+@property (strong,nonatomic) BaseNavigationController *gameSquareStack;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

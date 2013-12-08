@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+@synthesize mainViewController = _mainViewController;
+@synthesize gameSquareStack = _gameSquareStack;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,7 +24,16 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    _mainViewController = [[MainViewController alloc] init];
+    _gameSquareStack = [[BaseNavigationController alloc] initWithRootViewController:_mainViewController];
+    [_gameSquareStack setNavigationBarHidden:YES];
+    [self.window setRootViewController:_gameSquareStack];
+    
     return YES;
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
