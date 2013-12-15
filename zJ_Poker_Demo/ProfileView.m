@@ -15,12 +15,20 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self setBackgroundColor:[UIColor orangeColor]];
         [self _initView];
+
     }
     return self;
 }
 
 - (void)_initView
+{
+    [self _initUserImage];
+    
+}
+
+- (void) _initUserImage
 {
     _userImage = [[WXImageView alloc] initWithFrame:CGRectMake(7, 7, 55, 55)];
     _userImage.backgroundColor = [UIColor clearColor];
@@ -30,9 +38,8 @@
     _userImage.layer.masksToBounds = YES;
     _userImage.image = [UIImage imageNamed:@"male_head.jpg"];
     _userImage.touchBlock = ^{
-        //        UserViewController *userVC = [[UserViewController alloc] init];
-        //        userVC.userName = self.weiboModel.user.screen_name;
-        //        [self.viewController.navigationController pushViewController:userVC animated:YES];
+        UserViewController *userVC = [[UserViewController alloc] init];
+        [self.viewController.navigationController pushViewController:userVC animated:YES];
     };
     [self addSubview:_userImage];
 }

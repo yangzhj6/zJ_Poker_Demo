@@ -33,5 +33,12 @@
 @property (strong,nonatomic) UIButton *hideFullButton;
 @property (strong,nonatomic) UIButton *hideEmptyButton;
 
+@property (nonatomic,assign) BOOL ifQuick;
+@property (nonatomic,assign) BOOL ifFivePeople;
+@property (nonatomic,assign) BOOL ifOther;
+@property (nonatomic,assign) BOOL ifHideFull;
+@property (nonatomic,assign) BOOL ifHideEmpty;
+
+- (void)storeData;
 
 @end

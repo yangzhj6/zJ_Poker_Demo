@@ -59,6 +59,33 @@
     
 }
 
+- (void) help
+{
+    [self buttonStyle];
+    self.layer.cornerRadius = 10.0;
+    
+    self.backgroundColor = [UIColor colorWithRed:66/255.0 green:119/255.0 blue:255/255.0 alpha:1];
+    self.layer.borderColor = [[UIColor colorWithRed:55/255.0 green:125/255.0 blue:190/255.0 alpha:1] CGColor];
+    [self setBackgroundImage:[self buttonImageFromColor:[UIColor colorWithRed:50/255.0 green:120/255.0 blue:170/255.0 alpha:1]] forState:UIControlStateHighlighted];
+    
+    [self.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    
+}
+
+- (void) nomal
+{
+    [self buttonStyle];
+    self.layer.cornerRadius = 1.0;
+    
+    self.backgroundColor = [UIColor colorWithRed:66/255.0 green:119/255.0 blue:255/255.0 alpha:1];
+    self.layer.borderColor = [[UIColor colorWithRed:55/255.0 green:125/255.0 blue:190/255.0 alpha:1] CGColor];
+    [self setBackgroundImage:[self buttonImageFromColor:[UIColor colorWithRed:50/255.0 green:120/255.0 blue:170/255.0 alpha:1]] forState:UIControlStateHighlighted];
+    
+    [self.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    
+}
+
+
 
 - (UIImage *) buttonImageFromColor:(UIColor *)color{
     CGRect rect = CGRectMake(0, 0, self.width, self.height);

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WXImageView.h"
+#import "UserViewController.h"
 
 @interface ProfileView : UIView
 {

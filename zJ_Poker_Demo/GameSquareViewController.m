@@ -104,6 +104,7 @@
 }
 - (void) backAction:(UIButton *) button
 {
+//    [_settingView storeData];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -128,6 +129,7 @@
     }
     else{
         [_grayImage removeFromSuperview];
+        [_settingView storeData];
         [UIView animateWithDuration:0.15 animations:^{
             _settingView.top = -170;
         }];

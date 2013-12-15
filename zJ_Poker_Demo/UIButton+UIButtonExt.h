@@ -13,4 +13,7 @@
 - (void) quickStart;
 - (void) squareGame;
 - (void) beginStudy;
+- (void) help;
+- (void) nomal;
+
 @end
