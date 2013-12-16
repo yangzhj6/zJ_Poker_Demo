@@ -15,7 +15,6 @@
 
 @implementation RankViewController
 
-@synthesize backButton = _backButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,22 +31,13 @@
     [super viewDidLoad];
     
     [self _initBackGround];
-    [self _initBackButton];
+    [self _initBackButtonEXT];
     [self _initMainRankView];
 	// Do any additional setup after loading the view.
 }
 - (void) _initBackGround
 {
-    
-    _backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, ScreenWidth)];
-    [_backGroundImage setImage:[UIImage imageNamed:@"二级页面_底.jpg"]];
-    [_backGroundImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_backGroundImage];
-    
-    _titleBarImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, 45)];
-    [_titleBarImage setImage:[UIImage imageNamed:@"二级页面_标题.png"]];
-    [_titleBarImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_titleBarImage];
+    [self _initBackGroundEXT];
     
     UIImageView *firstBackGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(8, 48, 464, 264)];
     [firstBackGroundImage setImage:[UIImage imageNamed:@"第一层底.png"]];
@@ -64,61 +54,27 @@
 
 }
 
-- (void)_initBackButton
-{
-    _backButton = [[UIButton alloc] initWithFrame:CGRectMake(3, 5, 40, 25)];
-    [_backButton setImage:[UIImage imageNamed:@"Roomlist_backBtn.png"] forState:UIControlStateNormal];
-    [_backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_backButton];
-}
-- (void) backAction:(UIButton *) button
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
 - (void)_initMainRankView
 {
-    UIView *rankView1 = [[UIView alloc] initWithFrame:CGRectMake(20, 90, 140, 190)];
-    UIImageView *bgImg1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rankView1.width, rankView1.height)];
-    [bgImg1 setImage:[UIImage  imageNamed:@"第一层框.png"]];
-    UIImageView *img1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, rankView1.width - 20,rankView1.height - 80 )];
-    [img1 setImage:[UIImage imageNamed:@"Rank_Logo_1.jpg"]];
-    [rankView1 addSubview:bgImg1];
-    [rankView1 addSubview:img1];
-    [self.view addSubview:rankView1];
     
-    UIView *rankView2 = [[UIView alloc] initWithFrame:CGRectMake(rankView1.right + 10, 90, 140, 190)];
-    UIImageView *bgImg2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rankView2.width, rankView2.height)];
-    [bgImg2 setImage:[UIImage  imageNamed:@"第一层框.png"]];
-    UIImageView *img2 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, rankView2.width - 20,rankView2.height - 80 )];
-    [img2 setImage:[UIImage imageNamed:@"Rank_Logo_2.jpg"]];
-    [rankView2 addSubview:bgImg2];
-    [rankView2 addSubview:img2];
-    [self.view addSubview:rankView2];
-    
-    UIView *rankView3 = [[UIView alloc] initWithFrame:CGRectMake(rankView2.right + 10, 90, 140, 190)];
-    UIImageView *bgImg3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rankView3.width, rankView3.height)];
-    [bgImg3 setImage:[UIImage  imageNamed:@"第一层框.png"]];
-    UIImageView *img3 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, rankView3.width - 20,rankView3.height - 80 )];
-    [img3 setImage:[UIImage imageNamed:@"Rank_Logo_3.jpg"]];
-    [rankView3 addSubview:bgImg3];
-    [rankView3 addSubview:img3];
-    [self.view addSubview:rankView3];
-    
-    UIButton * rankButton1 = [[UIButton alloc]initWithFrame:rankView1.frame];
-    rankButton1.tag = 1001;
-    [rankButton1 addTarget:self action:@selector(rankButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIButton * rankButton2 = [[UIButton alloc]initWithFrame:rankView2.frame];
-    rankButton2.tag = 1002;
-    [rankButton2 addTarget:self action:@selector(rankButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIButton * rankButton3 = [[UIButton alloc]initWithFrame:rankView3.frame];
-    rankButton3.tag = 1003;
-    [rankButton3 addTarget:self action:@selector(rankButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:rankButton1];
-    [self.view addSubview:rankButton2];
-    [self.view addSubview:rankButton3];
+    for (int i = 0; i< 3; i++) {
+        UIView *rankView = [[UIView alloc] initWithFrame:CGRectMake(20 + i*150, 90, 140, 190)];
+        UIImageView *bgImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rankView.width, rankView.height)];
+        
+        [bgImg setImage:[UIImage  imageNamed:@"第一层框.png"]];
+        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, rankView.width - 20,rankView.height - 80 )];
+        NSString *imaName = [[NSString alloc] initWithString:[NSString stringWithFormat:@"Rank_Logo_%d.jpg",i+1]];
+        [img setImage:[UIImage imageNamed:imaName]];
+        
+        [rankView addSubview:bgImg];
+        [rankView addSubview:img];
+        [self.view addSubview:rankView];
+        
+        UIButton * rankButton = [[UIButton alloc]initWithFrame:rankView.frame];
+        rankButton.tag = 1001 + i;
+        [rankButton addTarget:self action:@selector(rankButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:rankButton];
+    }
     
 }
 

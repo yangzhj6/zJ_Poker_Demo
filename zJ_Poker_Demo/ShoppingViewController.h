@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "shoppingMallTableView.h"
+#import "NewShoppingMallTableView.h"
 
 @interface ShoppingViewController : BaseViewController
 {
@@ -16,5 +17,5 @@
 @property (strong,nonatomic) UIButton *backButton;
 @property (strong,nonatomic) UIImageView *shoppingMallViewImage;
 @property (strong,nonatomic) shoppingMallTableView *shoppingMallTableView;
-
+@property (strong,nonatomic) NewShoppingMallTableView *newshoppingMallTableView;
 @end

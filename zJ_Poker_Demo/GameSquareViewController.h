@@ -10,12 +10,11 @@
 #import "GameSquareSearchBarView.h"
 #import "GameSquareTableView.h"
 #import "SettingView.h"
-#import "WXImageView.h"
 
 @interface GameSquareViewController : BaseViewController
 {
     UIImageView *_backGroundImage;
-    WXImageView *_grayImage;
+    UIButton *_grayImage;
     UILabel *_name;
 }
 

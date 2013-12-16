@@ -28,7 +28,7 @@
     static NSString *identify = @"RankCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify] ;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
     
     return cell;

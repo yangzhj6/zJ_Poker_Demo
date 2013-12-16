@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WXImageView.h"
 #import "UserViewController.h"
 
 @interface ProfileView : UIView
 {
     
-    WXImageView *_userImage;
+    UIButton *_userImage;
     UILabel *userName;
     UIView  *money;
     UIView  *level;

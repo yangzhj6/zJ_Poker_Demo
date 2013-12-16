@@ -18,6 +18,8 @@
 @synthesize shoppingMallViewImage = _shoppingMallViewImage;
 @synthesize shoppingMallTableView = _shoppingMallTableView;
 
+@synthesize newshoppingMallTableView = _newshoppingMallTableView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -68,8 +70,11 @@
 
 -(void) _initTableView
 {
-    _shoppingMallTableView = [[shoppingMallTableView alloc] initWithFrame:CGRectMake(4, 45, ScreenHeight - 8,ScreenWidth - 50)];
+    _shoppingMallTableView = [[shoppingMallTableView alloc] initWithFrame:CGRectMake(4, 47, ScreenHeight - 8,ScreenWidth - 50)];
     [self.view addSubview:_shoppingMallTableView];
+    
+//    _newshoppingMallTableView = [[NewShoppingMallTableView alloc] initWithFrame:CGRectMake(4, 47, ScreenHeight - 8,ScreenWidth - 50)];
+//    [self.view addSubview:_newshoppingMallTableView];
 }
 
 

@@ -23,7 +23,7 @@
 - (void) _initView
 {
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [self setBackgroundColor:[UIColor grayColor]];
+    [self setBackgroundColor:[UIColor orangeColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

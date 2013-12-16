@@ -18,7 +18,6 @@
 
 
 @synthesize activityImage = _activityImage;
-@synthesize backButton = _backButton;
 @synthesize firstActivityButton = _firstActivityButton;
 @synthesize secondActivityButton = _secondActivityButton;
 @synthesize thirdActivityButton = _thirdActivityButton;
@@ -40,10 +39,10 @@
 {
     [super viewDidLoad];
     
-    _lastTouchNumber = -1;
+    _lastTouchNumber = 101;
     
     [self _initBackGround];
-    [self _initBackButton];
+    [self _initBackButtonEXT];
     [self _initActivityButton];
     [self _initReceiveAwardsButton];
     
@@ -53,15 +52,7 @@
 - (void) _initBackGround
 {
     
-    _backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, ScreenWidth)];
-    [_backGroundImage setImage:[UIImage imageNamed:@"二级页面_底.jpg"]];
-    [_backGroundImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_backGroundImage];
-    
-    _titleBarImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, 45)];
-    [_titleBarImage setImage:[UIImage imageNamed:@"二级页面_标题.png"]];
-    [_titleBarImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_titleBarImage];
+    [self _initBackGroundEXT];
     
     _labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     [_labelTitle setCenter:CGPointMake(ScreenHeight/2, 17)];
@@ -91,18 +82,6 @@
     [_footBarImage setImage:[UIImage imageNamed:@"底条背景.png"]];
     [self.view addSubview:_footBarImage];
     
-}
-
-- (void)_initBackButton
-{
-    _backButton = [[UIButton alloc] initWithFrame:CGRectMake(3, 5, 40, 25)];
-    [_backButton setImage:[UIImage imageNamed:@"Roomlist_backBtn.png"] forState:UIControlStateNormal];
-    [_backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_backButton];
-}
-- (void) backAction:(UIButton *) button
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) _initReceiveAwardsButton
@@ -164,6 +143,15 @@
     _fourthActivityButton.tag = 104;
     [_fourthActivityButton addTarget:self action:@selector(activityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_fourthActivityButton];
+    
+
+//    for(int i = 0;i<4;i++){
+//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(15 + i*115, ScreenWidth - 50, 105, 40)];
+//        [btn nomal];
+//        btn.tag = 101 + i;
+//        [btn addTarget:self action:@selector(activityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+//        [self.view addSubview:btn];
+//    }
 }
 
 - (void) activityButtonAction:(UIButton *)button
@@ -178,7 +166,6 @@
             [_labelTitle setText:@"云顶山庄"];
             [UIView animateWithDuration:0.25 animations:^{
                 _slideImage.left = _footBarImage.left;
-                _slideImage.width = 122;
 
             }];
         }
@@ -201,7 +188,7 @@
             [_labelTitle setText:@"皇家圣殿"];
             [UIView animateWithDuration:0.25 animations:^{
                 _slideImage.left = button.left - 5;
-                            }];
+            }];
         }
         
         _lastTouchNumber = soy;

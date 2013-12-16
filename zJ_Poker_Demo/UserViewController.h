@@ -26,6 +26,7 @@
     UIScrollView *_genderScrollView;
     UIButton *_gender;
     UIImageView *_arrowImage;
+    UIImageView *_textFieldBackground;
     BOOL _ifGenderOpen;
 }
 

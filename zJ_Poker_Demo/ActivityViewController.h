@@ -10,8 +10,7 @@
 
 @interface ActivityViewController : UIViewController
 {
-    UIImageView *_backGroundImage;
-    UIImageView *_titleBarImage;
+
     UILabel *_labelTitle;
     UIImageView *_activityBGImage;
     UIImageView *_footBarImage;
@@ -22,7 +21,6 @@
 @property (strong,nonatomic) UIImageView *activityImage;
 @property (strong,nonatomic) UILabel *activityLabel;
 
-@property (strong,nonatomic) UIButton *backButton;
 @property (strong,nonatomic) UIButton *receiveAwardsButton;
 
 @property (strong,nonatomic) UIButton *firstActivityButton;

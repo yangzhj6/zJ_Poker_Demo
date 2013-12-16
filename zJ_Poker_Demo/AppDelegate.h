@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
-#import "WXImageView.h"
 #import "BaseNavigationController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

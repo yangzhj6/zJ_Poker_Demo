@@ -186,6 +186,12 @@
     [_scrollContentView setBackgroundColor:[UIColor clearColor]];
     [self _initScrollContentView];
     [_userInfoScrollView addSubview:_scrollContentView];
+    
+//    _textFieldBackground = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 140, 30)];
+//    [_textFieldBackground setUserInteractionEnabled:YES];
+//    [_textFieldBackground setImage:[UIImage imageNamed:@"pwTextFieldBackground.png"]];
+//    [_scrollContentView addSubview:_textFieldBackground];
+    
 }
 
 -(void)_initScrollContentView
@@ -273,6 +279,7 @@
     
      NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
     _ifGenderOpen = NO;
+
     
     _genderView = [[UIImageView alloc] initWithFrame:CGRectMake(2, 32, 40, 20)];
     [_genderView setImage:[UIImage imageNamed:@"modifyInfoModifySexBGBtn.png"]];

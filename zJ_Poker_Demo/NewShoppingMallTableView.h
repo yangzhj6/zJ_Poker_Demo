@@ -1,22 +1,18 @@
 //
-//  shoppingMallTableView.h
+//  NewShoppingMallTableView.h
 //  zJ_Poker_Demo
 //
-//  Created by zJ on 13-12-9.
+//  Created by zJ on 13-12-16.
 //  Copyright (c) 2013年 zJ. All rights reserved.
 //
 
 #import "BaseTableView.h"
-#import "shoppingMallCell.h"
 
-@interface shoppingMallTableView : BaseTableView
+@interface NewShoppingMallTableView : BaseTableView
 {
     NSInteger _selected;
     NSInteger _nextSelected;
     BOOL _ifOpen;
 
 }
-
-@property (strong,nonatomic) NSArray *data;
-
 @end

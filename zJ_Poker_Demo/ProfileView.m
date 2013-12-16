@@ -30,18 +30,23 @@
 
 - (void) _initUserImage
 {
-    _userImage = [[WXImageView alloc] initWithFrame:CGRectMake(7, 7, 55, 55)];
+    _userImage = [[UIButton alloc] initWithFrame:CGRectMake(7, 7, 55, 55)];
     _userImage.backgroundColor = [UIColor clearColor];
     _userImage.layer.cornerRadius = 5;  //圆弧半径
     _userImage.layer.borderWidth = .5;
     _userImage.layer.borderColor = [UIColor grayColor].CGColor;
     _userImage.layer.masksToBounds = YES;
-    _userImage.image = [UIImage imageNamed:@"male_head.jpg"];
-    _userImage.touchBlock = ^{
-        UserViewController *userVC = [[UserViewController alloc] init];
-        [self.viewController.navigationController pushViewController:userVC animated:YES];
-    };
+    [_userImage setImage:[UIImage imageNamed:@"male_head.jpg"] forState:UIControlStateNormal];
+    [_userImage setImage:[UIImage imageNamed:@"male_head.jpg"] forState:UIControlStateHighlighted];
+    [_userImage addTarget:self action:@selector(userImageTouchAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self addSubview:_userImage];
+}
+
+- (void)userImageTouchAction:(UIButton *) button
+{
+    UserViewController *userVC = [[UserViewController alloc] init];
+    [self.viewController.navigationController pushViewController:userVC animated:YES];
 }
 
 /*

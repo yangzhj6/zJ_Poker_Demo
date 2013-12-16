@@ -84,14 +84,12 @@
 
 - (void) _initGrayImage
 {
-    _grayImage = [[WXImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, ScreenWidth)];
+    _grayImage = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, ScreenWidth)];
     _grayImage.backgroundColor = [UIColor blackColor];
     _grayImage.alpha = 0.5;
-    _grayImage.touchBlock = ^{
-        [self settingAction:_settingButton];
-    };
-
+    [_grayImage addTarget:self action:@selector(settingAction:) forControlEvents:UIControlEventTouchDown];
 }
+
 
 - (void) _initBackButton
 {
@@ -130,7 +128,7 @@
     else{
         [_grayImage removeFromSuperview];
         [_settingView storeData];
-        [UIView animateWithDuration:0.15 animations:^{
+        [UIView animateWithDuration:0.25 animations:^{
             _settingView.top = -170;
         }];
     }

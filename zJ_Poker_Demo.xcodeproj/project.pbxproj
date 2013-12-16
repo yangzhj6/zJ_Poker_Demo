@@ -69,6 +69,8 @@
 		38624F991859A42500915A52 /* Secrecy_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 38624F951859A42500915A52 /* Secrecy_big.png */; };
 		38624F9A1859A42500915A52 /* pwTextFieldBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 38624F961859A42500915A52 /* pwTextFieldBackground.png */; };
 		3873BFBB185D648A00E40F84 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873BFBA185D648A00E40F84 /* MessageView.m */; };
+		3873BFC2185E9D4600E40F84 /* UIViewController+setBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873BFC1185E9D4600E40F84 /* UIViewController+setBackground.m */; };
+		3873BFC6185EE24600E40F84 /* NewShoppingMallTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873BFC5185EE24600E40F84 /* NewShoppingMallTableView.m */; };
 		38750D1C185AA81B000BE5EE /* modifyInfoModifySexBGBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 38750D1A185AA81B000BE5EE /* modifyInfoModifySexBGBtn.png */; };
 		38750D1D185AA81B000BE5EE /* modifyInfoModifySexSelectBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 38750D1B185AA81B000BE5EE /* modifyInfoModifySexSelectBtn.png */; };
 		38750D1F185AA834000BE5EE /* modifyInfoModifySexBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 38750D1E185AA834000BE5EE /* modifyInfoModifySexBtn.png */; };
@@ -130,7 +132,6 @@
 		38BFF5A7184F06650085ED69 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFF5A6184F06650085ED69 /* BaseNavigationController.m */; };
 		38BFF5AA184F0A110085ED69 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFF5A9184F0A110085ED69 /* BaseViewController.m */; };
 		38BFF5AD184F0A3A0085ED69 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFF5AC184F0A3A0085ED69 /* MainViewController.m */; };
-		38BFF5B1184F22E80085ED69 /* WXImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFF5B0184F22E80085ED69 /* WXImageView.m */; };
 		38BFF5BB184F2D000085ED69 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFF5BA184F2D000085ED69 /* ProfileView.m */; };
 		38C6CFCD1854519B0042F1B7 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C6CFCC1854519B0042F1B7 /* SettingView.m */; };
 		38C6CFD6185456EC0042F1B7 /* 房间列表_圆形选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C6CFCE185456EC0042F1B7 /* 房间列表_圆形选中.png */; };
@@ -270,6 +271,10 @@
 		38624F961859A42500915A52 /* pwTextFieldBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwTextFieldBackground.png; sourceTree = "<group>"; };
 		3873BFB9185D648A00E40F84 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
 		3873BFBA185D648A00E40F84 /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		3873BFC0185E9D4600E40F84 /* UIViewController+setBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+setBackground.h"; sourceTree = "<group>"; };
+		3873BFC1185E9D4600E40F84 /* UIViewController+setBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+setBackground.m"; sourceTree = "<group>"; };
+		3873BFC4185EE24600E40F84 /* NewShoppingMallTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShoppingMallTableView.h; sourceTree = "<group>"; };
+		3873BFC5185EE24600E40F84 /* NewShoppingMallTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShoppingMallTableView.m; sourceTree = "<group>"; };
 		38750D1A185AA81B000BE5EE /* modifyInfoModifySexBGBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modifyInfoModifySexBGBtn.png; sourceTree = "<group>"; };
 		38750D1B185AA81B000BE5EE /* modifyInfoModifySexSelectBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modifyInfoModifySexSelectBtn.png; sourceTree = "<group>"; };
 		38750D1E185AA834000BE5EE /* modifyInfoModifySexBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modifyInfoModifySexBtn.png; sourceTree = "<group>"; };
@@ -345,8 +350,6 @@
 		38BFF5A9184F0A110085ED69 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		38BFF5AB184F0A3A0085ED69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		38BFF5AC184F0A3A0085ED69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		38BFF5AF184F22E80085ED69 /* WXImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImageView.h; sourceTree = "<group>"; };
-		38BFF5B0184F22E80085ED69 /* WXImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImageView.m; sourceTree = "<group>"; };
 		38BFF5B9184F2D000085ED69 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
 		38BFF5BA184F2D000085ED69 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
 		38C6CFCB1854519B0042F1B7 /* SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingView.h; sourceTree = "<group>"; };
@@ -549,6 +552,15 @@
 			name = EGO;
 			sourceTree = "<group>";
 		};
+		3873BFBF185E9D0B00E40F84 /* 二级页面 */ = {
+			isa = PBXGroup;
+			children = (
+				3873BFC0185E9D4600E40F84 /* UIViewController+setBackground.h */,
+				3873BFC1185E9D4600E40F84 /* UIViewController+setBackground.m */,
+			);
+			name = "二级页面";
+			sourceTree = "<group>";
+		};
 		38750D21185AF74F000BE5EE /* 下拉屏幕 */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,8 +576,6 @@
 				38624F7D1859989F00915A52 /* EGO */,
 				38EB78821852240C00C6C9B0 /* RTLabel.h */,
 				38EB78831852240C00C6C9B0 /* RTLabel.m */,
-				38BFF5AF184F22E80085ED69 /* WXImageView.h */,
-				38BFF5B0184F22E80085ED69 /* WXImageView.m */,
 				389510A018501450003FB078 /* UIViewExt.h */,
 				389510A118501450003FB078 /* UIViewExt.m */,
 				389510AB18506138003FB078 /* UIView+Additions.h */,
@@ -734,6 +744,8 @@
 				38A442501855C9FE00605B26 /* shoppingMallTableView.m */,
 				38A442521855CD7900605B26 /* shoppingMallCell.h */,
 				38A442531855CD7900605B26 /* shoppingMallCell.m */,
+				3873BFC4185EE24600E40F84 /* NewShoppingMallTableView.h */,
+				3873BFC5185EE24600E40F84 /* NewShoppingMallTableView.m */,
 			);
 			name = "商城模块";
 			sourceTree = "<group>";
@@ -756,6 +768,7 @@
 		38BFF5B2184F237E0085ED69 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3873BFBF185E9D0B00E40F84 /* 二级页面 */,
 				38750D21185AF74F000BE5EE /* 下拉屏幕 */,
 				38624F661859667C00915A52 /* 排行榜模块 */,
 				385D99AE18589BF000C0844B /* 活动模块 */,
@@ -1120,11 +1133,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3873BFC2185E9D4600E40F84 /* UIViewController+setBackground.m in Sources */,
 				38624F65185961B400915A52 /* SIAlertView.m in Sources */,
+				3873BFC6185EE24600E40F84 /* NewShoppingMallTableView.m in Sources */,
 				389510B018506830003FB078 /* GameSquareSearchBarView.m in Sources */,
 				389510AD18506138003FB078 /* UIView+Additions.m in Sources */,
 				3850501418571AC9002E3EF1 /* HelpTableViewCell.m in Sources */,
-				38BFF5B1184F22E80085ED69 /* WXImageView.m in Sources */,
 				38EB7881185166BD00C6C9B0 /* GameSquareTableViewCell.m in Sources */,
 				38BFF5A7184F06650085ED69 /* BaseNavigationController.m in Sources */,
 				38624F79185990C700915A52 /* RankDetailViewController.m in Sources */,

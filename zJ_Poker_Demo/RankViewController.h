@@ -10,11 +10,8 @@
 
 @interface RankViewController : UIViewController
 {
-    UIImageView *_backGroundImage;
     UILabel *_labelTitle;
-    UIImageView *_titleBarImage;
 }
 
-@property (strong,nonatomic) UIButton *backButton;
 
 @end

@@ -14,11 +14,8 @@
 @interface HelpViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_cellName;
-    UIImageView *_backGroundImage;
-    UIImageView *_titleBarImage;
     UILabel *_labelTitle;
 }
 @property (strong,nonatomic) UITableView *helpTableView;
-@property (strong,nonatomic) UIButton *backButton;
 
 @end

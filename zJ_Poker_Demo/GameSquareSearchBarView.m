@@ -58,8 +58,6 @@
         [button addSubview:buttonTile];
         
     }
-    
-    
 }
 
 
@@ -96,9 +94,8 @@
                 self.fourthTouchBlock();
             }
         }
+
     }];
-    
-    
 
     
 }

@@ -15,7 +15,6 @@
 @implementation HelpViewController
 
 @synthesize helpTableView = _helpTableView;
-@synthesize backButton = _backButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,22 +34,14 @@
     
     [self _initBackGround];
     [self _initHelpTableView];
-    [self _initBackButton];
+    [self _initBackButtonEXT];
 	// Do any additional setup after loading the view.
 }
 
 - (void) _initBackGround
 {
     
-    _backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, ScreenWidth)];
-    [_backGroundImage setImage:[UIImage imageNamed:@"二级页面_底.jpg"]];
-    [_backGroundImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_backGroundImage];
-    
-    _titleBarImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenHeight, 45)];
-    [_titleBarImage setImage:[UIImage imageNamed:@"二级页面_标题.png"]];
-    [_titleBarImage setUserInteractionEnabled:YES];
-    [self.view addSubview:_titleBarImage];
+    [self _initBackGroundEXT];
     
     _labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     [_labelTitle setCenter:CGPointMake(ScreenHeight/2, 22.5)];
@@ -77,20 +68,6 @@
     
     [self.view addSubview:_helpTableView];
 }
-
-- (void)_initBackButton
-{
-    _backButton = [[UIButton alloc] initWithFrame:CGRectMake(3, 5, 40, 25)];
-    [_backButton setImage:[UIImage imageNamed:@"Roomlist_backBtn.png"] forState:UIControlStateNormal];
-    [_backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_backButton];
-}
-- (void) backAction:(UIButton *) button
-{
-    //    [_settingView storeData];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 
 #pragma mark - UITableViewDataSource
 
