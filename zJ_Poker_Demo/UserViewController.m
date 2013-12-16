@@ -331,6 +331,8 @@
 - (void)modifyGenderAction:(UIButton *)button
 {
     NSInteger soy = button.tag;
+    [_textField removeFromSuperview];
+
 
     if(soy == 101)
     {
@@ -421,6 +423,9 @@
     _textField.delegate = self;
     [_scrollContentView addSubview:_textField];
     [_textField becomeFirstResponder];
+    
+    [_genderView setHidden:NO];
+    [_arrowImage setHidden:NO];
 }
 
 - (void) setNameSuccess
@@ -442,6 +447,7 @@
     _userName.text = _textField.text;
     [self setNameSuccess];
     [_textField resignFirstResponder];//主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
+    [self donghua];
     [_textField removeFromSuperview];
 
     return YES;
@@ -471,6 +477,7 @@
 - (void)tapAnywhereToDismissKeyboard:(UIGestureRecognizer *)gestureRecognizer {
     //此method会将self.view里所有的subview的first responder都resign掉
     [self setNameSuccess];
+    [self donghua];
     [_textField removeFromSuperview];
     [self.view endEditing:YES];
     

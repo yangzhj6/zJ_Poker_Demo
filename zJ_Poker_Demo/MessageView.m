@@ -93,7 +93,7 @@
             offest_y = 0;
         }
         _mainView.top = offest_y;
-        NSLog(@"%f",offest_y);
+//        NSLog(@"%f",offest_y);
         
         if (recognizer.state == UIGestureRecognizerStateEnded) {
             if(_ifShow){
