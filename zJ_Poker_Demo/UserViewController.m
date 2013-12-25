@@ -453,7 +453,7 @@
 {
     _userName.text = _textField.text;
     [self setNameSuccess];
-    [_textField resignFirstResponder];//主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
+    [textField resignFirstResponder];//主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
     [self donghua];
     [_textField removeFromSuperview];
 
